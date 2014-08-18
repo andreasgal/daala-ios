@@ -171,9 +171,21 @@ decode_thread::next_frame(od_img *img) {
 
 player::player()
 {
-    printf("Test!\n");
+    decode = new decode_thread();
 }
 
 player::~player()
+{
+    delete decode;
+}
+
+bool
+player::open(const char *name)
+{
+    return decode->open(name);
+}
+
+void
+player::show_frame()
 {
 }

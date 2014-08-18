@@ -25,6 +25,9 @@ static player* player = nullptr;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSString * path = [[NSBundle mainBundle] pathForResource:  @"daala-test" ofType: @"ogv"];
+    player = new class player();
+    player->open([path UTF8String]);
     return YES;
 }
 							
