@@ -1,9 +1,9 @@
 #include <string>
+#include <stack>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include <semaphore.h>
 #include <assert.h>
 
 #include "player.h"
@@ -14,6 +14,12 @@ using namespace std;
 class decode_thread {
     string input_path;
     pthread_t thread;
+    pthread_mutex_t mutex;
+    pthread_cond_t cond;
+    stack<od_img*> imgs;
+
+    void recycle_img(od_img *img);
+    od_img *wait_img();
 public:
     decode_thread(const char *name);
     ~decode_thread();
@@ -31,9 +37,34 @@ static void* start_decode_loop(void *arg) {
     return nullptr;
 }
 
+void
+decode_thread::recycle_img(od_img *img)
+{
+    pthread_mutex_lock(&mutex);
+    imgs.push(img);
+    pthread_cond_signal(&cond);
+    pthread_mutex_unlock(&mutex);
+}
+
+od_img *
+decode_thread::wait_img()
+{
+    pthread_mutex_lock(&mutex);
+    while (imgs.size() == 0)
+        pthread_cond_wait(&cond, &mutex);
+    od_img *img = imgs.top();
+    imgs.pop();
+    pthread_mutex_unlock(&mutex);
+    return img;
+}
+
 decode_thread::decode_thread(const char *name) : input_path(name)
 {
     check(pthread_create(&thread, nullptr, start_decode_loop, this) == 0);
+    check(pthread_mutex_init(&mutex, nullptr) == 0);
+    check(pthread_cond_init(&cond, nullptr) == 0);
+    for (int n = 0; n < 3; ++n)
+        recycle_img(new od_img());
 }
 
 decode_thread::~decode_thread()
@@ -79,8 +110,9 @@ decode_thread::loop()
                 check((dctx = daala_decode_alloc(&di, dsi)) != nullptr);
                 header = false;
             }
-            od_img img;
-            check(daala_decode_packet_in(dctx, &img, &packet) == 0);
+            od_img *img = wait_img();
+            check(daala_decode_packet_in(dctx, img, &packet) == 0);
+            printf("decode!\n");
         }
     }
     check(ogg_sync_clear(&oy) == 0);
