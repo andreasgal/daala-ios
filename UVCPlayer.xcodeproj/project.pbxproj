@@ -60,20 +60,7 @@
 		2AD0F60319A18FA100BDDD86 /* pvq_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F52E19A18FA000BDDD86 /* pvq_encoder.c */; };
 		2AD0F60419A18FA100BDDD86 /* state.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F52F19A18FA000BDDD86 /* state.c */; };
 		2AD0F60519A18FA100BDDD86 /* switch_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53119A18FA000BDDD86 /* switch_table.c */; };
-		2AD0F60619A18FA100BDDD86 /* check_initial.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53319A18FA000BDDD86 /* check_initial.c */; };
-		2AD0F60719A18FA100BDDD86 /* check_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53419A18FA000BDDD86 /* check_main.c */; };
-		2AD0F60819A18FA100BDDD86 /* ectest.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53519A18FA000BDDD86 /* ectest.c */; };
-		2AD0F60919A18FA100BDDD86 /* headerencode_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53619A18FA000BDDD86 /* headerencode_test.c */; };
-		2AD0F60A19A18FA100BDDD86 /* logging_test.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53719A18FA000BDDD86 /* logging_test.c */; };
-		2AD0F60B19A18FA100BDDD86 /* test_coef_coder.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53819A18FA000BDDD86 /* test_coef_coder.c */; };
-		2AD0F60C19A18FA100BDDD86 /* test_divu_small.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53919A18FA000BDDD86 /* test_divu_small.c */; };
-		2AD0F60D19A18FA100BDDD86 /* test_filters.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53A19A18FA000BDDD86 /* test_filters.c */; };
 		2AD0F60E19A18FA100BDDD86 /* tf.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53B19A18FA000BDDD86 /* tf.c */; };
-		2AD0F60F19A18FA100BDDD86 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F53E19A18FA000BDDD86 /* cpu.c */; };
-		2AD0F61019A18FA100BDDD86 /* sse2mc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54019A18FA000BDDD86 /* sse2mc.c */; };
-		2AD0F61119A18FA100BDDD86 /* x86enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54119A18FA000BDDD86 /* x86enc.c */; };
-		2AD0F61219A18FA100BDDD86 /* x86mcenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54419A18FA000BDDD86 /* x86mcenc.c */; };
-		2AD0F61319A18FA100BDDD86 /* x86state.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54519A18FA000BDDD86 /* x86state.c */; };
 		2AD0F61419A18FA100BDDD86 /* zigzag16.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54619A18FA000BDDD86 /* zigzag16.c */; };
 		2AD0F61519A18FA100BDDD86 /* zigzag4.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54719A18FA000BDDD86 /* zigzag4.c */; };
 		2AD0F61619A18FA100BDDD86 /* zigzag8.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54819A18FA000BDDD86 /* zigzag8.c */; };
@@ -179,24 +166,8 @@
 		2AD0F52F19A18FA000BDDD86 /* state.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = state.c; sourceTree = "<group>"; };
 		2AD0F53019A18FA000BDDD86 /* state.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = state.h; sourceTree = "<group>"; };
 		2AD0F53119A18FA000BDDD86 /* switch_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = switch_table.c; sourceTree = "<group>"; };
-		2AD0F53319A18FA000BDDD86 /* check_initial.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = check_initial.c; sourceTree = "<group>"; };
-		2AD0F53419A18FA000BDDD86 /* check_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = check_main.c; sourceTree = "<group>"; };
-		2AD0F53519A18FA000BDDD86 /* ectest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ectest.c; sourceTree = "<group>"; };
-		2AD0F53619A18FA000BDDD86 /* headerencode_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = headerencode_test.c; sourceTree = "<group>"; };
-		2AD0F53719A18FA000BDDD86 /* logging_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logging_test.c; sourceTree = "<group>"; };
-		2AD0F53819A18FA000BDDD86 /* test_coef_coder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_coef_coder.c; sourceTree = "<group>"; };
-		2AD0F53919A18FA000BDDD86 /* test_divu_small.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_divu_small.c; sourceTree = "<group>"; };
-		2AD0F53A19A18FA000BDDD86 /* test_filters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_filters.c; sourceTree = "<group>"; };
 		2AD0F53B19A18FA000BDDD86 /* tf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tf.c; sourceTree = "<group>"; };
 		2AD0F53C19A18FA000BDDD86 /* tf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tf.h; sourceTree = "<group>"; };
-		2AD0F53E19A18FA000BDDD86 /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpu.c; sourceTree = "<group>"; };
-		2AD0F53F19A18FA000BDDD86 /* cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
-		2AD0F54019A18FA000BDDD86 /* sse2mc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sse2mc.c; sourceTree = "<group>"; };
-		2AD0F54119A18FA000BDDD86 /* x86enc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = x86enc.c; sourceTree = "<group>"; };
-		2AD0F54219A18FA000BDDD86 /* x86enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x86enc.h; sourceTree = "<group>"; };
-		2AD0F54319A18FA000BDDD86 /* x86int.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x86int.h; sourceTree = "<group>"; };
-		2AD0F54419A18FA000BDDD86 /* x86mcenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = x86mcenc.c; sourceTree = "<group>"; };
-		2AD0F54519A18FA000BDDD86 /* x86state.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = x86state.c; sourceTree = "<group>"; };
 		2AD0F54619A18FA000BDDD86 /* zigzag16.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zigzag16.c; sourceTree = "<group>"; };
 		2AD0F54719A18FA000BDDD86 /* zigzag4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zigzag4.c; sourceTree = "<group>"; };
 		2AD0F54819A18FA000BDDD86 /* zigzag8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zigzag8.c; sourceTree = "<group>"; };
@@ -402,45 +373,13 @@
 				2AD0F52F19A18FA000BDDD86 /* state.c */,
 				2AD0F53019A18FA000BDDD86 /* state.h */,
 				2AD0F53119A18FA000BDDD86 /* switch_table.c */,
-				2AD0F53219A18FA000BDDD86 /* tests */,
 				2AD0F53B19A18FA000BDDD86 /* tf.c */,
 				2AD0F53C19A18FA000BDDD86 /* tf.h */,
-				2AD0F53D19A18FA000BDDD86 /* x86 */,
 				2AD0F54619A18FA000BDDD86 /* zigzag16.c */,
 				2AD0F54719A18FA000BDDD86 /* zigzag4.c */,
 				2AD0F54819A18FA000BDDD86 /* zigzag8.c */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		2AD0F53219A18FA000BDDD86 /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				2AD0F53319A18FA000BDDD86 /* check_initial.c */,
-				2AD0F53419A18FA000BDDD86 /* check_main.c */,
-				2AD0F53519A18FA000BDDD86 /* ectest.c */,
-				2AD0F53619A18FA000BDDD86 /* headerencode_test.c */,
-				2AD0F53719A18FA000BDDD86 /* logging_test.c */,
-				2AD0F53819A18FA000BDDD86 /* test_coef_coder.c */,
-				2AD0F53919A18FA000BDDD86 /* test_divu_small.c */,
-				2AD0F53A19A18FA000BDDD86 /* test_filters.c */,
-			);
-			path = tests;
-			sourceTree = "<group>";
-		};
-		2AD0F53D19A18FA000BDDD86 /* x86 */ = {
-			isa = PBXGroup;
-			children = (
-				2AD0F53E19A18FA000BDDD86 /* cpu.c */,
-				2AD0F53F19A18FA000BDDD86 /* cpu.h */,
-				2AD0F54019A18FA000BDDD86 /* sse2mc.c */,
-				2AD0F54119A18FA000BDDD86 /* x86enc.c */,
-				2AD0F54219A18FA000BDDD86 /* x86enc.h */,
-				2AD0F54319A18FA000BDDD86 /* x86int.h */,
-				2AD0F54419A18FA000BDDD86 /* x86mcenc.c */,
-				2AD0F54519A18FA000BDDD86 /* x86state.c */,
-			);
-			path = x86;
 			sourceTree = "<group>";
 		};
 		2AD0F66819A18FFA00BDDD86 /* ogg */ = {
@@ -581,10 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD0F60319A18FA100BDDD86 /* pvq_encoder.c in Sources */,
-				2AD0F61119A18FA100BDDD86 /* x86enc.c in Sources */,
 				2AD0F5F419A18FA100BDDD86 /* infodec.c in Sources */,
-				2AD0F60F19A18FA100BDDD86 /* cpu.c in Sources */,
-				2AD0F60819A18FA100BDDD86 /* ectest.c in Sources */,
 				2AD0F5EA19A18FA100BDDD86 /* decode.c in Sources */,
 				2AD0F40619A18B9100BDDD86 /* main.m in Sources */,
 				2AD0F61419A18FA100BDDD86 /* zigzag16.c in Sources */,
@@ -602,32 +538,22 @@
 				2AD0F5EC19A18FA100BDDD86 /* entcode.c in Sources */,
 				2AD0F5E519A18FA100BDDD86 /* adapt.c in Sources */,
 				2AD0F5E819A18FA100BDDD86 /* block_size_enc.c in Sources */,
-				2AD0F61319A18FA100BDDD86 /* x86state.c in Sources */,
-				2AD0F60C19A18FA100BDDD86 /* test_divu_small.c in Sources */,
 				2AD0F60519A18FA100BDDD86 /* switch_table.c in Sources */,
 				2AD0F61619A18FA100BDDD86 /* zigzag8.c in Sources */,
-				2AD0F60B19A18FA100BDDD86 /* test_coef_coder.c in Sources */,
 				2AD0F40A19A18B9100BDDD86 /* UVCAppDelegate.m in Sources */,
-				2AD0F60D19A18FA100BDDD86 /* test_filters.c in Sources */,
 				2AD0F5EF19A18FA100BDDD86 /* filter.c in Sources */,
 				2AD0F5ED19A18FA100BDDD86 /* entdec.c in Sources */,
-				2AD0F60A19A18FA100BDDD86 /* logging_test.c in Sources */,
 				2AD0F60119A18FA100BDDD86 /* pvq_code.c in Sources */,
 				2AD0F5F319A18FA100BDDD86 /* info.c in Sources */,
 				2AD0F5FB19A18FA100BDDD86 /* laplace_tables.c in Sources */,
 				2AD0F60419A18FA100BDDD86 /* state.c in Sources */,
 				2AD0F5FD19A18FA100BDDD86 /* mc.c in Sources */,
-				2AD0F60719A18FA100BDDD86 /* check_main.c in Sources */,
 				2AD0F5F619A18FA100BDDD86 /* internal.c in Sources */,
 				2AD0F5E919A18FA100BDDD86 /* dct.c in Sources */,
 				2AD0F5F919A18FA100BDDD86 /* laplace_decoder.c in Sources */,
 				2AD0F5FA19A18FA100BDDD86 /* laplace_encoder.c in Sources */,
-				2AD0F61019A18FA100BDDD86 /* sse2mc.c in Sources */,
 				2AD0F60019A18FA100BDDD86 /* pvq.c in Sources */,
-				2AD0F61219A18FA100BDDD86 /* x86mcenc.c in Sources */,
-				2AD0F60919A18FA100BDDD86 /* headerencode_test.c in Sources */,
 				2AD0F60219A18FA100BDDD86 /* pvq_decoder.c in Sources */,
-				2AD0F60619A18FA100BDDD86 /* check_initial.c in Sources */,
 				2AD0F5F819A18FA100BDDD86 /* intradata.c in Sources */,
 				2AD0F5FE19A18FA100BDDD86 /* mcenc.c in Sources */,
 				2AD0F5F519A18FA100BDDD86 /* infoenc.c in Sources */,
@@ -773,6 +699,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UVCPlayer/UVCPlayer-Prefix.pch";
 				INFOPLIST_FILE = "UVCPlayer/UVCPlayer-Info.plist";
+				OTHER_CFLAGS = (
+					"-I./ogg/include",
+					"-I./daala/include",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -786,6 +716,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UVCPlayer/UVCPlayer-Prefix.pch";
 				INFOPLIST_FILE = "UVCPlayer/UVCPlayer-Info.plist";
+				OTHER_CFLAGS = (
+					"-I./ogg/include",
+					"-I./daala/include",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
