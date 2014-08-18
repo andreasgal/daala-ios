@@ -16,55 +16,59 @@ static void check(bool ok)
     assert(ok);
 }
 
+template <typename T>
 class sync_queue {
-    queue<od_img*> q;
+    queue<T*> q;
     pthread_mutex_t mutex;
     pthread_cond_t cond;
 public:
     sync_queue();
     ~sync_queue();
 
-    void put(od_img *img);
-    od_img *get();
+    void put(T *img);
+    T *get();
 };
 
-sync_queue::sync_queue()
+template <typename T>
+sync_queue<T>::sync_queue()
 {
     check(pthread_mutex_init(&mutex, nullptr) == 0);
     check(pthread_cond_init(&cond, nullptr) == 0);
 }
 
-sync_queue::~sync_queue()
+template <typename T>
+sync_queue<T>::~sync_queue()
 {
 }
 
+template <typename T>
 void
-sync_queue::put(od_img *img)
+sync_queue<T>::put(T *x)
 {
     pthread_mutex_lock(&mutex);
-    q.push(img);
+    q.push(x);
     pthread_cond_signal(&cond);
     pthread_mutex_unlock(&mutex);
 }
 
-od_img *
-sync_queue::get()
+template<typename T>
+T *
+sync_queue<T>::get()
 {
     pthread_mutex_lock(&mutex);
     while (q.empty())
         pthread_cond_wait(&cond, &mutex);
-    od_img *img = q.front();
+    T *x = q.front();
     q.pop();
     pthread_mutex_unlock(&mutex);
-    return img;
-
+    return x;
 }
 
 class decode_thread {
     string input_path;
     pthread_t thread;
-    sync_queue unused;
-    sync_queue decoded;
+    sync_queue<od_img> unused;
+    sync_queue<od_img> decoded;
 public:
     decode_thread(const char *name);
     ~decode_thread();
