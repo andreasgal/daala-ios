@@ -7,8 +7,20 @@
 //
 
 #import "UVCAppDelegate.h"
+#include "player.h"
 
 @implementation UVCAppDelegate
+
+int printf(const char * __restrict format, ...)
+{
+    va_list args;
+    va_start(args,format);
+    NSLogv([NSString stringWithUTF8String:format], args) ;
+    va_end(args);
+    return 1;
+}
+
+static player* player = nullptr;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

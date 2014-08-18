@@ -14,12 +14,12 @@
 		2AD0F3FE19A18B9100BDDD86 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD0F3FD19A18B9100BDDD86 /* OpenGLES.framework */; };
 		2AD0F40419A18B9100BDDD86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F40219A18B9100BDDD86 /* InfoPlist.strings */; };
 		2AD0F40619A18B9100BDDD86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F40519A18B9100BDDD86 /* main.m */; };
-		2AD0F40A19A18B9100BDDD86 /* UVCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F40919A18B9100BDDD86 /* UVCAppDelegate.m */; };
+		2AD0F40A19A18B9100BDDD86 /* UVCAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F40919A18B9100BDDD86 /* UVCAppDelegate.mm */; };
 		2AD0F40D19A18B9100BDDD86 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F40B19A18B9100BDDD86 /* Main_iPhone.storyboard */; };
 		2AD0F41019A18B9100BDDD86 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F40E19A18B9100BDDD86 /* Main_iPad.storyboard */; };
 		2AD0F41219A18B9100BDDD86 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F41119A18B9100BDDD86 /* Shader.fsh */; };
 		2AD0F41419A18B9100BDDD86 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F41319A18B9100BDDD86 /* Shader.vsh */; };
-		2AD0F41719A18B9100BDDD86 /* UVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F41619A18B9100BDDD86 /* UVCViewController.m */; };
+		2AD0F41719A18B9100BDDD86 /* UVCViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F41619A18B9100BDDD86 /* UVCViewController.mm */; };
 		2AD0F41919A18B9100BDDD86 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F41819A18B9100BDDD86 /* Images.xcassets */; };
 		2AD0F42019A18B9100BDDD86 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD0F41F19A18B9100BDDD86 /* XCTest.framework */; };
 		2AD0F42119A18B9100BDDD86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD0F3F519A18B9100BDDD86 /* Foundation.framework */; };
@@ -67,6 +67,7 @@
 		2AD0F77F19A18FFB00BDDD86 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F6EA19A18FFB00BDDD86 /* bitwise.c */; };
 		2AD0F78019A18FFB00BDDD86 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F6EB19A18FFB00BDDD86 /* framing.c */; };
 		2AD0F7A019A1934000BDDD86 /* daala-test.ogv in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F79F19A1934000BDDD86 /* daala-test.ogv */; };
+		2AD0F7A319A193E600BDDD86 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F7A119A193E600BDDD86 /* player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,13 +92,13 @@
 		2AD0F40519A18B9100BDDD86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AD0F40719A18B9100BDDD86 /* UVCPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UVCPlayer-Prefix.pch"; sourceTree = "<group>"; };
 		2AD0F40819A18B9100BDDD86 /* UVCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UVCAppDelegate.h; sourceTree = "<group>"; };
-		2AD0F40919A18B9100BDDD86 /* UVCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UVCAppDelegate.m; sourceTree = "<group>"; };
+		2AD0F40919A18B9100BDDD86 /* UVCAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UVCAppDelegate.mm; sourceTree = "<group>"; };
 		2AD0F40C19A18B9100BDDD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		2AD0F40F19A18B9100BDDD86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		2AD0F41119A18B9100BDDD86 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
 		2AD0F41319A18B9100BDDD86 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
 		2AD0F41519A18B9100BDDD86 /* UVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UVCViewController.h; sourceTree = "<group>"; };
-		2AD0F41619A18B9100BDDD86 /* UVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UVCViewController.m; sourceTree = "<group>"; };
+		2AD0F41619A18B9100BDDD86 /* UVCViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UVCViewController.mm; sourceTree = "<group>"; };
 		2AD0F41819A18B9100BDDD86 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2AD0F41E19A18B9100BDDD86 /* UVCPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UVCPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD0F41F19A18B9100BDDD86 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -177,6 +178,8 @@
 		2AD0F6EA19A18FFB00BDDD86 /* bitwise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwise.c; sourceTree = "<group>"; };
 		2AD0F6EB19A18FFB00BDDD86 /* framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = framing.c; sourceTree = "<group>"; };
 		2AD0F79F19A1934000BDDD86 /* daala-test.ogv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "daala-test.ogv"; path = "media/daala-test.ogv"; sourceTree = "<group>"; };
+		2AD0F7A119A193E600BDDD86 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		2AD0F7A219A193E600BDDD86 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,15 +247,17 @@
 				2AD0F66819A18FFA00BDDD86 /* ogg */,
 				2AD0F4BC19A18FA000BDDD86 /* daala */,
 				2AD0F40819A18B9100BDDD86 /* UVCAppDelegate.h */,
-				2AD0F40919A18B9100BDDD86 /* UVCAppDelegate.m */,
+				2AD0F40919A18B9100BDDD86 /* UVCAppDelegate.mm */,
 				2AD0F40B19A18B9100BDDD86 /* Main_iPhone.storyboard */,
 				2AD0F40E19A18B9100BDDD86 /* Main_iPad.storyboard */,
 				2AD0F41119A18B9100BDDD86 /* Shader.fsh */,
 				2AD0F41319A18B9100BDDD86 /* Shader.vsh */,
 				2AD0F41519A18B9100BDDD86 /* UVCViewController.h */,
-				2AD0F41619A18B9100BDDD86 /* UVCViewController.m */,
+				2AD0F41619A18B9100BDDD86 /* UVCViewController.mm */,
 				2AD0F41819A18B9100BDDD86 /* Images.xcassets */,
 				2AD0F40019A18B9100BDDD86 /* Supporting Files */,
+				2AD0F7A119A193E600BDDD86 /* player.cpp */,
+				2AD0F7A219A193E600BDDD86 /* player.h */,
 			);
 			path = UVCPlayer;
 			sourceTree = "<group>";
@@ -527,6 +532,7 @@
 				2AD0F5F419A18FA100BDDD86 /* infodec.c in Sources */,
 				2AD0F5EA19A18FA100BDDD86 /* decode.c in Sources */,
 				2AD0F40619A18B9100BDDD86 /* main.m in Sources */,
+				2AD0F7A319A193E600BDDD86 /* player.cpp in Sources */,
 				2AD0F61419A18FA100BDDD86 /* zigzag16.c in Sources */,
 				2AD0F5FC19A18FA100BDDD86 /* logging.c in Sources */,
 				2AD0F5E619A18FA100BDDD86 /* block_size.c in Sources */,
@@ -544,7 +550,7 @@
 				2AD0F5E819A18FA100BDDD86 /* block_size_enc.c in Sources */,
 				2AD0F60519A18FA100BDDD86 /* switch_table.c in Sources */,
 				2AD0F61619A18FA100BDDD86 /* zigzag8.c in Sources */,
-				2AD0F40A19A18B9100BDDD86 /* UVCAppDelegate.m in Sources */,
+				2AD0F40A19A18B9100BDDD86 /* UVCAppDelegate.mm in Sources */,
 				2AD0F5EF19A18FA100BDDD86 /* filter.c in Sources */,
 				2AD0F5ED19A18FA100BDDD86 /* entdec.c in Sources */,
 				2AD0F60119A18FA100BDDD86 /* pvq_code.c in Sources */,
@@ -562,7 +568,7 @@
 				2AD0F5FE19A18FA100BDDD86 /* mcenc.c in Sources */,
 				2AD0F5F519A18FA100BDDD86 /* infoenc.c in Sources */,
 				2AD0F5F719A18FA100BDDD86 /* intra.c in Sources */,
-				2AD0F41719A18B9100BDDD86 /* UVCViewController.m in Sources */,
+				2AD0F41719A18B9100BDDD86 /* UVCViewController.mm in Sources */,
 				2AD0F5E719A18FA100BDDD86 /* block_size_dec.c in Sources */,
 				2AD0F78019A18FFB00BDDD86 /* framing.c in Sources */,
 				2AD0F5F019A18FA100BDDD86 /* generic_code.c in Sources */,
