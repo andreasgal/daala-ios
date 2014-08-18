@@ -66,6 +66,7 @@
 		2AD0F61619A18FA100BDDD86 /* zigzag8.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F54819A18FA000BDDD86 /* zigzag8.c */; };
 		2AD0F77F19A18FFB00BDDD86 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F6EA19A18FFB00BDDD86 /* bitwise.c */; };
 		2AD0F78019A18FFB00BDDD86 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0F6EB19A18FFB00BDDD86 /* framing.c */; };
+		2AD0F7A019A1934000BDDD86 /* daala-test.ogv in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0F79F19A1934000BDDD86 /* daala-test.ogv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		2AD0F6D519A18FFA00BDDD86 /* os_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os_types.h; sourceTree = "<group>"; };
 		2AD0F6EA19A18FFB00BDDD86 /* bitwise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwise.c; sourceTree = "<group>"; };
 		2AD0F6EB19A18FFB00BDDD86 /* framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = framing.c; sourceTree = "<group>"; };
+		2AD0F79F19A1934000BDDD86 /* daala-test.ogv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "daala-test.ogv"; path = "media/daala-test.ogv"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		2AD0F3E919A18B9000BDDD86 = {
 			isa = PBXGroup;
 			children = (
+				2AD0F79F19A1934000BDDD86 /* daala-test.ogv */,
 				2AD0F3FF19A18B9100BDDD86 /* UVCPlayer */,
 				2AD0F42519A18B9100BDDD86 /* UVCPlayerTests */,
 				2AD0F3F419A18B9100BDDD86 /* Frameworks */,
@@ -495,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD0F7A019A1934000BDDD86 /* daala-test.ogv in Resources */,
 				2AD0F41219A18B9100BDDD86 /* Shader.fsh in Resources */,
 				2AD0F41019A18B9100BDDD86 /* Main_iPad.storyboard in Resources */,
 				2AD0F40D19A18B9100BDDD86 /* Main_iPhone.storyboard in Resources */,
