@@ -10,7 +10,6 @@ public:
     ~player();
 
     bool open(const char *name);
-    void show_frame();
 };
 
 
