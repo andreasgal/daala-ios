@@ -1,5 +1,6 @@
 #import "UVCViewController.h"
 #include "player.h"
+#include "daaladec.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -132,6 +133,9 @@ GLfloat gVertexData[] =
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
+    od_img *img = _player->next_frame();
+    _player->recycle_frame(img);
+
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
