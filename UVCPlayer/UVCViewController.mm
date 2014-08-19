@@ -135,18 +135,18 @@ struct Texture {
 
 - (void)uploadTexture:(Texture *)texture unit:(GLuint)unit img:(od_img*)img plane:(od_img_plane*)plane
 {
-    GLuint target = GL_TEXTURE_2D;
-    glActiveTexture(unit);
-    glBindTexture(target, unit);
     GLuint tex = texture->tex;
     if (!tex) {
         glGenTextures(1, &texture->tex);
         tex = texture->tex;
-        glTexParameteri(target, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-        glTexParameteri(target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        glTexParameteri(target, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(target, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     }
+    GLuint target = GL_TEXTURE_2D;
+    glActiveTexture(unit);
+    glBindTexture(target, unit);
+    glTexParameteri(target, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(target, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(target, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glPixelStorei(GL_UNPACK_ALIGNMENT, plane->xstride);
     glTexImage2D(target, 0, GL_ALPHA, plane->ystride, img->height >> plane->ydec, 0,
                  GL_ALPHA, GL_UNSIGNED_BYTE, plane->data);
@@ -171,9 +171,9 @@ struct Texture {
 
     od_img *img = _player->next_frame();
 
-    [self uploadTexture:&Y unit:0 img:img plane:&img->planes[0]];
-    [self uploadTexture:&Cb unit:1 img:img plane:&img->planes[1]];
-    [self uploadTexture:&Cr unit:2 img:img plane:&img->planes[2]];
+    [self uploadTexture:&Y unit:GL_TEXTURE0 img:img plane:&img->planes[0]];
+    [self uploadTexture:&Cb unit:GL_TEXTURE1 img:img plane:&img->planes[1]];
+    [self uploadTexture:&Cr unit:GL_TEXTURE2 img:img plane:&img->planes[2]];
 
     _player->recycle_frame(img);
 
