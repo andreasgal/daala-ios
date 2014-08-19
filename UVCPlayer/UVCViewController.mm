@@ -172,12 +172,14 @@ struct Texture {
     od_img *img = _player->next_frame();
 
     [self uploadTexture:&Y unit:0 img:img plane:&img->planes[0]];
-    [self uploadTexture:&Y unit:1 img:img plane:&img->planes[1]];
-    [self uploadTexture:&Y unit:2 img:img plane:&img->planes[2]];
+    [self uploadTexture:&Cb unit:1 img:img plane:&img->planes[1]];
+    [self uploadTexture:&Cr unit:2 img:img plane:&img->planes[2]];
 
     _player->recycle_frame(img);
 
-    glUniform1f(glGetUniformLocation(_program, "Yw"), 1.0);
+    glUniform1f(glGetUniformLocation(_program, "Yw"), Y.tw);
+    glUniform1f(glGetUniformLocation(_program, "Cbw"), Cb.tw);
+    glUniform1f(glGetUniformLocation(_program, "Crw"), Cr.tw);
 
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }

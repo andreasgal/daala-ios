@@ -1,6 +1,8 @@
 attribute vec2 position;
 
 uniform float Yw;
+uniform float Cbw;
+uniform float Cbr;
 
 void main()
 {
