@@ -162,6 +162,13 @@ struct Texture {
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glBindVertexArrayOES(_vertexArray);
+
+    glUseProgram(_program);
+
     od_img *img = _player->next_frame();
 
     [self uploadTexture:&Y unit:0 img:img plane:&img->planes[0]];
@@ -170,12 +177,7 @@ struct Texture {
 
     _player->recycle_frame(img);
 
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    glBindVertexArrayOES(_vertexArray);
-
-    glUseProgram(_program);
+    glUniform1f(glGetUniformLocation(_program, "Yw"), 1.0);
 
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
