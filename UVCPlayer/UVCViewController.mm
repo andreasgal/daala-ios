@@ -148,7 +148,7 @@ struct Texture {
         glTexParameteri(target, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     }
     glPixelStorei(GL_UNPACK_ALIGNMENT, plane->xstride);
-    glTexImage2D(target, 0, GL_ALPHA, plane->xstride, img->height >> plane->ydec, 0,
+    glTexImage2D(target, 0, GL_ALPHA, plane->ystride, img->height >> plane->ydec, 0,
                  GL_ALPHA, GL_UNSIGNED_BYTE, plane->data);
     texture->tw = GLfloat(img->width >> plane->xdec) / GLfloat(plane->ystride);
 }

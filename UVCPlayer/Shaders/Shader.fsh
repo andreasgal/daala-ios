@@ -4,10 +4,13 @@ uniform sampler2D Y;
 uniform sampler2D Cb;
 uniform sampler2D Cr;
 
-varying vec4 texCoords;
+varying vec2 texCoordsY;
 
 void main()
 {
+    float y = texture2D(Y, texCoordsY).a;
+    gl_FragColor = vec4(y, y, y, 1.0);
+    /*
     float y = texture2D(Y, texCoords.xw).a;
     float u = texture2D(Cb, texCoords.yw).a;
     float v = texture2D(Cr, texCoords.zw).a;
@@ -18,4 +21,5 @@ void main()
         yuv.x - 0.39176171875 * yuv.y - 0.81296875 * yuv.z + 0.52959375,
         yuv.x + 2.017234375   * yuv.y - 1.081390625,
         1.0);
+     */
 }

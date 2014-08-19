@@ -121,7 +121,6 @@ decode_thread::loop()
     daala_setup_info *dsi = nullptr;
     bool header = true;
     daala_dec_ctx *dctx = nullptr;
-    int x = 0;
     while (true) {
         ogg_page page;
         while (ogg_sync_pageout(&oy, &page) != 1) {
@@ -150,7 +149,6 @@ decode_thread::loop()
             od_img *img = unused.get();
             check(daala_decode_packet_in(dctx, img, &packet) == 0);
             decoded.put(img);
-            printf("decode! %d\n",x++);
         }
     }
     check(ogg_sync_clear(&oy) == 0);
