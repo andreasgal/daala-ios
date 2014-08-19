@@ -9,5 +9,6 @@ varying vec2 texCoordsY;
 void main()
 {
     gl_Position = vec4(position, 0.0, 1.0);
-    texCoordsY = vec2(position.x * Yw, position.y);
+    vec2 texCoords = (position + vec2(1.0, 1.0)) / vec2(2.0, 2.0);
+    texCoordsY = texCoords * vec2(Yw, 1.0);
 }
