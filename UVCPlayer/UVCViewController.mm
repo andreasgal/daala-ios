@@ -177,6 +177,9 @@ struct Texture {
 
     _player->recycle_frame(img);
 
+    glUniform1i(glGetUniformLocation(_program, "Y"), 0);
+    glUniform1i(glGetUniformLocation(_program, "Cb"), 1);
+    glUniform1i(glGetUniformLocation(_program, "Cr"), 2);
     glUniform1f(glGetUniformLocation(_program, "Yw"), Y.tw);
     glUniform1f(glGetUniformLocation(_program, "Cbw"), Cb.tw);
     glUniform1f(glGetUniformLocation(_program, "Crw"), Cr.tw);
